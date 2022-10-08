@@ -1,0 +1,14 @@
+from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
+from MyApi.Throttling import JackRateThrottle
+from rest_framework import generics
+from rest_framework.throttling import ScopedRateThrottle
+
+REST_FRAMEWORK = {
+    'DEFAULT_THROTTLE_RATES':{
+        'anon': '2/day',
+        'user': '5/hour',
+        'jack': '3/minute',
+        'viewstu': '5/hour',
+        'viewstu': '2/day',
+    }
+}
